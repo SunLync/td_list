@@ -1,8 +1,17 @@
 {% include 'partials/header.html' %}
-<a href="/todos"><< Go Back</a>
-<h1>{{todo.title}}</h1>
-<p>{{todo.text}}</p>
-<br>
-Created on {{todo.created_at}}
+
+{% block content %}
+<h3 class="center-align red lighten-4">{{todo.title}}</h3>
+<div class="card">
+	<div class="card-content">
+			{{todo.text}}
+	</div>
+	<div class="card-action">
+			{{todo.created_at}}
+	</div>
+</div>
+<a href="/" class="btn">Go Back</a>
+<!-- <a href="todos/add" calss="btn">Add Item </a> -->
+{% endblock %}
 
 {% include 'partials/footer.html' %}
